@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   
   <title>Frontend Mentor | Profile card component</title>
 
@@ -12,24 +13,102 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(185, 75%, 39%);
+      /* font-family: Kumbh Sans; */
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 1.2px;
+      overflow: hidden;
+    }
+    .card{
+      width: 20rem;
+      height: 23rem;
+      margin-top: 200px;
+      border: none;
+      box-shadow: 2px black;
+      border-radius: 5%;
+    }
+    .card-img-top{
+      border-radius: 10px 10px 0 0;
+    }
+    .profile-img{
+      border: 3px solid white;
+    }
+    .bold-text{
+      font-weight: 700;
+      color: hsl(229, 23%, 23%);
+    }
+    .light-text{
+      font-weight: 400;
+      color: hsl(0, 0%, 59%);
+    }
+    .card-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 978px;
+    height: 978px;
+    right: 48%;
+    bottom: 50%;
+    background-image: url('images/bg-pattern-top.svg');
+    /* background: linear-gradient(45deg, rgba(9, 137, 180, 0) 34%, #53FFEE 100%); */
+}
+.card-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 978px;
+    height: 978px;
+    left: 45%;
+    top: 60%;
+    z-index: -1;
+    background-image: url('images/bg-pattern-bottom.svg');
+    /* background: linear-gradient(45deg, rgba(9, 137, 180, 0) 34%, #53FFEE 100%); */
+}
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
 
-  80K
-  Followers
+  <div class="card-wrapper" style="height: 720px;">
+  <div class="card mx-auto shadow" >
+    <img src="images/bg-pattern-card.svg" class="card-img-top" alt="card_background">
+    <img src="images/image-victor.jpg" class="rounded-circle profile-img mx-auto mt-n5" alt="victor">
+    <div class="card-body">
+      <div class="card-title text-center">
+        <span class="bold-text">Victor Crest</span>   
+        <span class="light-text" style="padding-left: 8px;">26</span>
+      </div>
+      <p class="text-center light-text small">London</p>
+    </div>
+    <div class="card-footer bg-transparent pt-3">
+      <div class="row no-gutters">
+        <div class="col-4 text-center">
+          <span class="bold-text">80K</span>
+          <p class="light-text small">Followers</p>
+        </div>
+        <div class="col-4 text-center">
+          <span class="bold-text">803K</span>
+          <p class="light-text small">Likes</p>
+        </div>
+        <div class="col-4 text-center">
+          <span class="bold-text">1.4K</span>
+          <p class="light-text small">Photos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  803K
-  Likes
+  
+  
+  
 
-  1.4K
-  Photos
-  <div class="attribution">
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
